@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>원형 그라데이션</title>
+    <style>
+      div {
+        width: 500px;
+        height: 300px;
+        margin: 10px;
+      }
+      /* 타원형 원형 그라데이션 */
+      .grad {
+        background: red;
+        background: radial-gradient(ellipse, white, yellow, red);
+      } /* 타원형으로 흰색, 노란색, 빨간색으로 바뀌는 그라데이션*/
+      /* 원형 그라데이션 */
+      .grad2 {
+        background: red;
+        background: radial-gradient(circle, white, yellow, red);
+      } /* 원형으로 흰색, 노란색, 빨간색으로 바뀌는 그라데이션*/
+    </style>
+  </head>
+  <body>
+    <div class="grad"></div>
+    <div class="grad2"></div>
+  </body>
+</html>

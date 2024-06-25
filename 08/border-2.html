@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델</title>
+    <style>
+      div {
+        width: 200px;
+        height: 100px;
+        display: inline-block;
+        margin: 15px;
+        border-style: solid;
+      }
+      #box1 {
+        border-width: 2px;
+      }
+      #box2 {
+        border-width: thick thin; /*top&bottom, left&right*/
+      }
+      #box3 {
+        border-width: thick thin thin; /* top, right, bottom, left- thin (마주보는 right 값 참조)*/
+      }
+      #box4 {
+        border-width: 10px 5px 5px 10px; /* top, rigth, bottom, left */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+  </body>
+</html>
