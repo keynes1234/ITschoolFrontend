@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        padding: 10px;
+        margin: 5px;
+        /* 마우스 가져다대면 클릭 모양으로 변경 */
+        cursor: pointer;
+      }
+      .item[data-category="fruit"]:hover {
+        background-color: aqua;
+      }
+      .item[data-category="vegetable"]:hover {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item" data-category="fruit">Apple</div>
+    <div class="item" data-category="vegetable">Carrot</div>
+    <div class="item" data-category="fruit">Banana</div>
+    <div class="item" data-category="fruit">Orange</div>
+    <div class="item" data-category="vegetable">Tomato</div>
+  </body>
+</html>

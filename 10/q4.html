@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 붙이면 속성 선택자 이중조건 지정 가능함 단 공간을 띄워버리면 인식 못함 */
+      /* data-type이 fruit이면서 data-color가 red인 내용만 빨간 글씨로 표시 */
+      .item[data-type="fruit"][data-color="red"] {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="item" data-type="fruit" data-color="red">Apple</div>
+    <div class="item" data-type="fruit" data-color="blue">Blueberry</div>
+    <div class="item" data-type="vegetable" data-color="red">Tomato</div>
+    <div class="item" data-type="fruit" data-color="red">Strawberry</div>
+  </body>
+</html>
