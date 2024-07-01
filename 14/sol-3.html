@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 3</title>
+    <style>
+      body {
+        font-size: 1.2em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>소문자로 출력하기</h2>
+    <script>
+      do {
+        var myString = prompt(
+          "소문자로 변환할 알파벳을 입력하세요.",
+          "aBcDeFg"
+        );
+      } while (!myString); //var myString: myString | null
+
+      var msg = "";
+
+      for (var i = 0; i < myString.length; i++) {
+        var char = myString.charAt(i); //받은 문자열에서 i+1번째 문자 표시
+        if (char >= "A" && char <= "Z") {
+          msg += String.fromCharCode(  // String.fromCharCode : 유니코드 값을 문자열로 반환
+            char.charCodeAt() - "A".charCodeAt() + "a".charCodeAt()  // .charCodeAt() 문자열을 유니코드값으로 반환
+          );
+        } else {
+          msg += char;
+        }
+      }
+
+      document.write(msg);
+    </script>
+  </body>
+</html>
