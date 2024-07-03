@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>버스 요금 계산</title>
+  </head>
+  <body>
+    <script>
+      // 1. 입력 (문자열로 받음)
+      let input = prompt("만 나이를 입력하세요");
+      let age = parseInt(input); //(입력값을 parseInt로 먼저 Number 형태로 바꿔주자)
+      let busFare = 0;
+
+      // 2. 요금 계산
+      if (age >= 19) {
+        // 만 19세 이상 : 1500원
+        busFare = 1500 + "원";
+      } else if (age >= 13) {
+        //만 13세 ~ 만 18세 : 750원
+        busFare = 750 + "원";
+      } else if (age >= 6) {
+        //만 6세 ~  만 12세 : 350원
+        busFare = 350 + "원";
+      } else {
+        //만 6세 미만은 : 무료
+        busFare = "무료";
+      }
+
+      //출력
+      document.write(age + "세이신 당신의 요금은 " + busFare + "입니다.");
+    </script>
+  </body>
+</html>
