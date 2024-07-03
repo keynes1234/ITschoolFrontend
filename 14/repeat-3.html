@@ -14,13 +14,16 @@
   </head>
   <body>
     <script>
-      var sum = 0;
+      function foo() {
+        var sum = 0;
 
-      for (let i = 0; i <= 1000; i++) {
-        sum += i;
+        for (let i = 0; i <= 1000; i++) {
+          sum += i;
+        }
+
+        document.write("1부터 1000까지 더하면 " + sum + " 입니다.");
       }
-
-      document.write("1부터 1000까지 더하면 " + sum + " 입니다.");
+      foo();
     </script>
   </body>
 </html>

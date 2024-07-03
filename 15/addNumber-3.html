@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>함수</title>
     <style>
       body {
-        font-size: 1.5em;
-        line-height: 2;
+        padding-top: 20px;
         text-align: center;
       }
     </style>
   </head>
   <body>
     <script>
-      var sum = 0;
-
-      for(let i =0; i<= 5; i++){
-        sum += i;
-      }
-
-      document.write("1부터 5까지 더하면 " + sum + " 입니다.");
+      
+      var sum = function (a, b) {
+        a = 10;
+        b = 20;
+        return a + b;
+      };
+    
+      document.write("함수 실행 결과: " + sum());
     </script>
   </body>
 </html>
