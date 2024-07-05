@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function isMeasure(divisor, dividend){ 
+      // divisor(제수 : 어떤 수를 나누는 수) 
+      // dividend(나눗셈 당하는 수)
+      return (dividend % divisor === 0) ? true : false;
+
+    }
+
+    let divisor = prompt(" A : 나누는 수를 입력하세요.")
+    let dividend = prompt(" B : 나눗셈 당할 수를 입력하세요.")
+
+    alert(isMeasure ? "A는 B의 약수입니다." : "A는 B의 약수가 아닙니다.");
+  </script>
+</body>
+</html>

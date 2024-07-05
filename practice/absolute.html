@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>절대값 구하기</title>
+</head>
+<body>
+  <script>
+    let input = prompt = prompt("숫자를 입력하세요.");
+
+    let number = parseInt(input); // 문자열로 입력 -> 숫자
+
+    // if(number >= 0){ //양수 또는 0인 경우
+    //   number = number;
+    // }
+    // else{ //음수인 경우
+    //   number = -number;
+    // }
+
+    
+    
+    function calculateAbsolute(number){
+      return number >= 0 ? number : -number;
+
+    }
+
+    alert(input + "의 절대값은 " + calculateAbsolute(number) + "입니다.");
+  </script>
+</body>
+</html>

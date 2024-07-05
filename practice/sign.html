@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function determineSign(number) {
+        if (number > 0) {
+          return "값이 양수입니다.";
+        } else if (number < 0) {
+          return "값이 음수입니다.";
+        } else if ((number == 0)) {
+          return "값이 0입니다.";
+        } else return "입력이 잘못됐습니다.";
+      }
+
+      let input = prompt("정수 또는 0을 입력하세요.");
+      let num = parseInt(input);
+
+      alert(determineSign(num));
+    </script>
+  </body>
+</html>

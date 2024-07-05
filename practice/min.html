@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = Number(prompt("정수 a : "));
+      let b = Number(prompt("정수 b : "));
+      let c = Number(prompt("정수 c : "));
+
+      let min = Number.MAX_SAFE_INTEGER;
+
+      min = a;
+
+      if (min > b) {
+        min = b;
+      }
+
+      if (min > c) {
+        min = c;
+      }
+      alert("최소값은 " + min + "입니다.");
+    </script>
+  </body>
+</html>

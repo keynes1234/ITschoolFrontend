@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = Number(prompt("정수 a : "));
+      let b = Number(prompt("정수 b : "));
+      let c = Number(prompt("정수 c : "));
+
+      max = a;
+
+      if (max < b) {
+        //함수바꾸기 : ctrl + shift + l
+        max = b;
+      }
+
+      if (max < c) {
+        max = c;
+      }
+      alert("최대값은 " + max + "입니다.");
+    </script>
+  </body>
+</html>

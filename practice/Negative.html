@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isNegative(number) {
+        // number 가 음의 정수인지 확인하자
+
+        //음의 정수라면 true를 리턴하고, 아니라면 false를 리턴한다.
+        return number >= 0 ? false : true;
+      }
+
+      let input = prompt("숫자를 입력하세요.");
+      let number = parseInt(input);
+
+      alert(
+        number +
+          (isNegative(number)
+            ? "는 음의정수가 맞습니다"
+            : "는 음의정수가 아닙니다")
+      );
+    </script>
+  </body>
+</html>
