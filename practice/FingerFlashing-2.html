@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userChoice = parseInt(
+        prompt("가위(0), 바위(1),보(2) 중 하나를 선택하세요.")
+      );
+
+      let computerChoice = Math.floor(Math.random() * 3);
+
+      let choices = ["가위", "바위", "보"];
+
+      let result;
+      if (userChoice === computerChoice) {
+        result = "비겼습니다.";
+      } else if (
+        (userChoice === 0 && computerChoice === 2) ||
+        (userChoice === 1 && computerChoice === 0) ||
+        (userChoice === 2 && computerChoice === 1)
+      ) {
+        result = "당신이 이겼습니다.";
+      } else {
+        result = "당신이 졌습니다.";
+      }
+
+      alert(
+        "당신: " +
+          choices[userChoice] +
+          "vs 컴퓨터 : " +
+          choices[computerChoice] +
+          "결과 : " +
+          result
+      );
+    </script>
+  </body>
+</html>

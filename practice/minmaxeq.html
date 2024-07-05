@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대소 또는 동등 비교</title>
+  </head>
+  <body>
+    <script>
+      let a = prompt("정수 a : ");
+      let b = prompt("정수 b : ");
+
+      let numberA = parseInt(a);
+      let numberB = parseInt(b);
+
+      if (a === b) {
+        alert("두 값이 같습니다");
+      } else {
+        let max, min;
+
+        if (numberA < numberB) {
+          max = numberB;
+          min = numberA;
+        } else {
+          max = numberA;
+          min = numberB;
+        }
+
+        alert("max값은 " + max + ", min 값은 " + min + "입니다.");
+      }
+    </script>
+  </body>
+</html>

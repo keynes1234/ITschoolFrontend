@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let hand = parseInt(prompt("0. 가위, 1.바위, 2. 보"));
+      let rand = Math.floor(Math.random() * 3);
+      let msg = "컴퓨터가 낸 것 : ";
+      let result = " 승부 결과는 ";
+
+      switch (rand) {
+        case 0:
+          msg += "가위";
+          break;
+        case 1:
+          msg += "바위";
+          break;
+        case 2:
+          msg += "보";
+          break;
+      }
+      // 1 0, 2 1, 0 2
+
+      if (rand === hand) {
+        result += "비겼습니다.";
+      } else {
+        if (rand === 0) {
+          if (hand == 1) {
+            result += "당신이 이겼습니다.";
+          } else {
+            result += "당신이 졌습니다.";
+          }
+        } else if (rand === 1) {
+          if (hand == 1) {
+            result += "당신이 이겼습니다.";
+          } else {
+            result += "당신이 졌습니다.";
+          }
+        } else {
+          if (hand == 0) {
+            result += "당신이 이겼습니다.";
+          } else {
+            result += "당신이 졌습니다.";
+          }
+        }
+      }
+
+      alert(msg);
+    </script>
+  </body>
+</html>

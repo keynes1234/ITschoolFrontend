@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>두 값을 내림차순으로 정렬</title>
+  </head>
+  <body>
+    <script>
+      let a = parseInt(prompt("정수 a : "));
+      let b = parseInt(prompt("정수 b : "));
+
+      if (a < b) {
+        let temp = a;
+        a = b;
+        b = temp;
+      }
+
+      alert(`a>=b 가 되도록 정렬했습니다 
+    변수 a는 ${a} '입니다. 
+    변수 b는 ${b} 입니다.`);
+    </script>
+  </body>
+</html>
