@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 2</title>
+  </head>
+  <body>
+    <script>
+      const num1 = prompt("비교할 첫번째 숫자 :");
+      const num2 = prompt("비교할 두번째 숫자 :");
+
+      function ifElse(num1, num2) {
+        if (num1 === num2) {
+          document.write("같습니다.");
+        } else if (num1 > num2) {
+          document.write(num1 + "(이)가" + num2 + "보다 큽니다.");
+        } else {
+          document.write(num2 + "(이)가" + num1 + "보다 큽니다.");
+        }
+      }
+      ifElse(parseInt(num1), parseInt(num2));
+    </script>
+  </body>
+</html>
