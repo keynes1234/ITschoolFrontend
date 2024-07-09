@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/popup.js"></script>
+  </head>
+  <!-- js에서 openPopup 함수를 받아온다. (팝업실행함수)  -->
+  <body onload="openPopup()">
+    <p>문서를 열면 팝업 창이 표시됩니다.</p>
+
+    <script>
+      // window.onload 는 윈도우창이 켜졌을때 바로 실햄됨
+      window.onload = function () {
+        // popupShown쿠키의 value가 "n"이 아닐때 동작하는 needShow객체 생성
+        let needShow = getCookie("popupShown") !== "n";
+        if (needShow) {
+          // js에서 가져온 openPopup을 연다
+          openPopup();
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>공지사항</title>
+    <style>
+      #content {
+        border: 2px double skyblue;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      ul {
+        margin-left: 15px;
+        list-style-type: none;
+      }
+      ul li {
+        margin: 10px 5px;
+      }
+      button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+      }
+    </style>
+    <!-- deefer로 인해 src된 popup.js는 페이지 구성이 끝날때까지 지연된다. -->
+    <script src="js/popup.js" defer></script>
+  </head>
+  <body>
+    <div id="content">
+      <h1>공지사항</h1>
+      <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+        <li>항목 4</li>
+        <li>항목 5</li>
+      </ul>
+      <!-- 체크박스에 체크된 채로 윈도우의 닫기 버튼을 누르면 실행되는
+       쿠키 세팅으로 (name, value, days)입력값으로 ('popupShown', 'n', 1)
+       을 입력받는다. -->
+      <input
+        type="checkbox"
+        id="popupShown"
+        ,
+        onclick="setCookie('popupShown', 'n', 1); window.close();"
+      />
+      <!-- popupShown에 대한 label임을 표시 -->
+      <label for="popupShown"> 팝업 하루동안 보지 않기</label>
+      <!-- "javascript:window.close();" 에 해당하는 닫기 버튼을 만든다 -->
+      <button onclick="window.close();">닫기</button>
+    </div>
+  </body>
+</html>
