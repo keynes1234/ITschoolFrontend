@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM event 객체</title>
+    <style>
+      #container {
+        width: 300px;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="images/cup-1.png" id="cup" />
+    </div>
+
+    <script>
+      let cup = document.getElementById("cup");
+      cup.onclick = function (event) {
+        debugger;
+        alert(
+          "클릭한 이미지 파일" +
+            this.src +
+            "이벤트 타겟 src :" +
+            event.target.src
+        );
+      };
+    </script>
+  </body>
+</html>

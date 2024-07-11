@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM event 객체</title>
+    <style>
+      #container {
+        width: 300px;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/cup-1.png" id="cup" />
+    </div>
+
+    <script>
+      let cup = document.querySelector("#cup");
+      cup.onclick = changePic;
+
+      function changePic() {
+        cup.onclick = function (event) {
+          debugger;
+          alert(
+            `이벤트 유형 : ${event.type} 이벤트 발생 위치 : ${event.pageX}, ${event.pageY}, 타겟: ${event.target} `
+          );
+        };
+      }
+    </script>
+  </body>
+</html>

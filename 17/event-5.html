@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM event 객체</title>
+    <style>
+      #container {
+        width: 300px;
+        margin: 10px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="images/easys-1.jpg" id="cover" />
+    </div>
+
+    <script>
+      let cover = (document = document.getElementById("cover"));
+      cover.addEventListener("mouseover", changePic);
+      cover.addEventListener("mouseout", changePic);
+
+      function changePic(event) {
+        if (event.type === "mouseover") {
+          cover.src = "images/easys-2.jpg";
+        } else if (event.type === "mouseout") {
+          cover.src = "images/easys-1.jpg";
+        }
+      }
+    </script>
+  </body>
+</html>
