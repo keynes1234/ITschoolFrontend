@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 2</title>
+    <style>
+      form {
+        margin-bottom: 30px;
+      }
+      input[type="text"] {
+        width: 30px;
+        height: 20px;
+        text-align: center;
+      }
+      button {
+        margin-left: 10px;
+      }
+      table {
+        width: 300px;
+      }
+      table,
+      td {
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+      }
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form action="">
+        <input type="text" id="row" value="1" />행
+        <input type="text" id="column" value="1" />열
+        <button onclick="newRegister(); return false;">작성</button>
+        <button type="button" onclick="clearTable()">초기화</button>
+      </form>
+    </div>
+    <div id="result"></div>
+
+    <script>
+      function newRegister() {
+        var row = document.querySelector("#row").value;
+        var column = document.querySelector("#column").value;
+        var newTable = document.createElement("table");
+
+        
+        for (let i = 0; i < row; i++) {
+          var newRow = document.createElement("tr");
+          for (let j = 0; j < column; j++) {
+            var newCol = document.createElement("td");
+            var text = document.createTextNode(i + ", " + j);
+            newCol.appendChild(text);
+            newRow.appendChild(newCol);
+          }
+          newTable.appendChild(newRow);
+        }
+        var contents = document.querySelector("#result");
+        result.appendChild(newTable);
+      }
+
+      function clearTable() {
+      var delTable = document.querySelectorAll("table");
+      for (var i = 0; i < delTable.length; i++) {
+        delTable[i].parentNode.removeChild(delTable[i]);
+      }
+    }
+    </script>
+  </body>
+</html>
