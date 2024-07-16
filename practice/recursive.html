@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>재귀 함수</title>
+  </head>
+  <body>
+    <script>
+      function power(x, n) {
+        // Math.pow(x, n);
+        if (n === 0) {
+          return 1;
+        } else {
+          return x * power(x, n - 1);
+        }
+      }
+
+      function factorial(n) {
+        if (n === 1) {
+          return 1;
+        } else {
+          return n * factorial(n - 1);
+        }
+      }
+
+      // document.write(power(2, 4));
+      document.write(factorial(5));
+    </script>
+  </body>
+</html>
