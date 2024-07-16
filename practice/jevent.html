@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>만약 나를 선택하면, 나는 사라질 예정이야</p>
+    <p>나를 클릭해봐</p>
+    <p>나도 클릭해봐</p>
+    <script>
+      $(document).ready(function () {
+        $("p").on("click", function () {
+          $(this).hide(1000);
+        });
+      });
+    </script>
+  </body>
+</html>
